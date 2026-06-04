@@ -1,0 +1,33 @@
+import 'package:equatable/equatable.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+part '{{feature_name.snakeCase()}}_model.g.dart';
+
+@JsonSerializable()
+class {{feature_name.pascalCase()}}Model extends Equatable {
+  const {{feature_name.pascalCase()}}Model({
+    required this.id,
+    required this.name,
+  });
+
+  factory {{feature_name.pascalCase()}}Model.fromJson(Map<String, dynamic> json) =>
+      _${{feature_name.pascalCase()}}ModelFromJson(json);
+
+  final int id;
+  final String name;
+
+  Map<String, dynamic> toJson() => _${{feature_name.pascalCase()}}ModelToJson(this);
+
+  {{feature_name.pascalCase()}}Model copyWith({
+    int? id,
+    String? name,
+  }) {
+    return {{feature_name.pascalCase()}}Model(
+      id: id ?? this.id,
+      name: name ?? this.name,
+    );
+  }
+
+  @override
+  List<Object?> get props => [id, name];
+}
