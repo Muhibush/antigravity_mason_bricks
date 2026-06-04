@@ -21,7 +21,7 @@ To use these bricks in **any** Flutter project, create a `mason.yaml` file in th
 bricks:
   feature:
     git:
-      url: https://github.com/your-username/antigravity_mason_bricks.git
+      url: https://github.com/Muhibush/antigravity_mason_bricks.git
       path: feature
 ```
 
