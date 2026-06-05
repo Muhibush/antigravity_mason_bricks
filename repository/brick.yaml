@@ -1,0 +1,11 @@
+name: repository
+description: A Dio repository returning fpdart Either
+version: 0.1.0+1
+environment:
+  mason: ">=0.1.0-dev <0.1.0"
+vars:
+  name:
+    type: string
+    description: "The name of the repository (e.g. auth, product)"
+    default: "my_repo"
+    prompt: "What is the repository name?"
